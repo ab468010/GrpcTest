@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcDemo";
+
+import "google/protobuf/empty.proto";
+package user;
+
+// The greeting service definition.
+service User {
+  // 测试方法
+  rpc ShowUserName (google.protobuf.Empty) returns (UserResult);
+}
+
+message UserResult{
+    string name = 1;
+    int32 age = 2;
+}

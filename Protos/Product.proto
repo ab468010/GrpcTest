@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcDemo";
+
+import "google/protobuf/empty.proto";
+package product;
+
+service Product {
+  // 获取列表
+  rpc GetList (google.protobuf.Empty) returns (ProductResult);
+}
+
+message ProductResult{
+	string name = 1;
+	double price = 2;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcDemo";
+
+import "google/protobuf/empty.proto";
+package factory;
+
+// The greeting service definition.
+service Factory {
+  // ≤‚ ‘∑Ω∑®
+  rpc ShowUserName (google.protobuf.Empty) returns (FactoryResult);
+}
+
+message FactoryResult{
+    string message = 1;
+}
