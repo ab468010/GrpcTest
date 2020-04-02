@@ -24,24 +24,24 @@ namespace GrpcDemo
             });
         }
 
-        public override async Task GetList(UserQuery userQuery,IServerStreamWriter<User> responseStream, ServerCallContext context)
-        {
-            var res = new Response();
-            IEnumerable<User> users = new List<User>();
-            var a = Any.Pack(new User() { Age = 11, Mobile = "13564368651" });
-            res.Results.Add(a);
-            res.Code = 1;
-            res.Message = "OK";
-            //Google.Protobuf.WellKnownTypes.Int32Value.ExtensionSet.S
+        //public override async Task GetList(UserQuery userQuery, ServerCallContext context)
+        //{
+        //    var res = new Response();
+        //    IEnumerable<User> users = new List<User>();
+        //    var a = Any.Pack(new User() { Age = 11, Mobile = "13564368651" });
+        //    res.Results.Add(a);
+        //    res.Code = 1;
+        //    res.Message = "OK";
+        //    //Google.Protobuf.WellKnownTypes.Int32Value.ExtensionSet.S
 
-            await responseStream.WriteAsync(new User() { Age =11 });
+        //    //await responseStream.WriteAsync(new User() { Age =11 });
 
 
-            //return Task.FromResult(new User()
-            //{
-            //    City = $"用户的姓名是{Users[Rand.Next(0, Users.Count)]}",
-            //    Age = 17
-            //});
-        }
+        //    //return Task.FromResult(new User()
+        //    //{
+        //    //    City = $"用户的姓名是{Users[Rand.Next(0, Users.Count)]}",
+        //    //    Age = 17
+        //    //});
+        //}
     }
 }
