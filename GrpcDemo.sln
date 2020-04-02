@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcDemo", "GrpcDemo\GrpcDe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcClient", "GrpcClient\GrpcClient.csproj", "{C41D34F6-F671-4351-AFF2-035BB8004C8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFactory", "DataFactory\DataFactory.csproj", "{1DAD5FAD-2C02-4745-9C01-99904FA04CD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C41D34F6-F671-4351-AFF2-035BB8004C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C41D34F6-F671-4351-AFF2-035BB8004C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C41D34F6-F671-4351-AFF2-035BB8004C8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DAD5FAD-2C02-4745-9C01-99904FA04CD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DAD5FAD-2C02-4745-9C01-99904FA04CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DAD5FAD-2C02-4745-9C01-99904FA04CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DAD5FAD-2C02-4745-9C01-99904FA04CD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

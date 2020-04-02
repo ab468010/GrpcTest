@@ -3,14 +3,14 @@ syntax = "proto3";
 option csharp_namespace = "GrpcDemo";
 
 import "google/protobuf/empty.proto";
-package product;
+package Elmo;
 
-service Product {
+service PProductService {
   // 获取列表
-  rpc GetList (google.protobuf.Empty) returns (ProductResult);
+  rpc GetList (google.protobuf.Empty) returns (Product);
 }
 
-message ProductResult{
+message Product{
 	string name = 1;
-	double price = 2;
+    double price = 2;
 }

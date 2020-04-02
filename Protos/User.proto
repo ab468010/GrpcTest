@@ -3,15 +3,37 @@
 option csharp_namespace = "GrpcDemo";
 
 import "google/protobuf/empty.proto";
-package user;
+import "google/protobuf/any.proto";
+import "Base/Response.proto";
+import "google/protobuf/wrappers.proto";
 
-// The greeting service definition.
-service User {
-  // 测试方法
-  rpc ShowUserName (google.protobuf.Empty) returns (UserResult);
+package Elmo;
+
+service PUserService {
+  rpc Get (google.protobuf.Int32Value) returns (User);
+  rpc GetList (UserQuery) returns (Response);
+  rpc Update (User) returns (User);
+  rpc Add (User) returns (User);
 }
 
-message UserResult{
-    string name = 1;
-    int32 age = 2;
+message UserQuery{
+}
+
+message Int32{
+    int32 value = 1;
+}
+
+
+message User{
+    sint32 Age = 1;
+    string Brithday = 2;
+    string City = 3;
+    string Email = 4;
+    string Mobile = 5;
+    string OpenId = 6;
+    string Password = 7;
+    string Sex = 8;
+    string TmallBindId = 9;
+    string UnionId = 10;
+    sint32 SyncSystemUserId = 11;
 }

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcDemo";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/any.proto";
+package Elmo;
+
+message Response{
+
+    repeated google.protobuf.Any Results = 1;
+    google.protobuf.Any Result = 2;
+
+    sint32 Code = 3;
+    string Message = 4;
+}
